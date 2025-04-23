@@ -21,30 +21,25 @@ export const mapDiceResults = (diceResults: number[]): DiceResult => {
   }
 
   const [lowestRoll, highestRoll] = diceResults.sort();
+  const sum = lowestRoll + highestRoll;
 
-  if (lowestRoll + highestRoll === 3) {
-    return DiceResult.PLAYER_3ER_MANN; // Player becomes the new 3er Mann.
+  switch (true) {
+    case lowestRoll === 3 && highestRoll === 3:
+      return DiceResult.DREIER_PASCH;
+
+    case lowestRoll === highestRoll:
+      return DiceResult.PASCH;
+
+    case sum === 3:
+      return DiceResult.PLAYER_3ER_MANN;
+
+    case sum === 7:
+      return DiceResult.LINKS_TRINK;
+
+    case sum === 11:
+      return DiceResult.RECHTS_TRINK;
+
+    default:
+      return DiceResult.NO_RULE;
   }
-
-  if (lowestRoll === 3 && highestRoll === 3) {
-    return DiceResult.DREIER_PASCH; // Dreier Pasch!
-  }
-
-  if (lowestRoll === highestRoll) {
-    return DiceResult.PASCH; // Pasch!
-  }
-
-  if (lowestRoll + highestRoll === 7) {
-    return DiceResult.LINKS_TRINK; // Links trink!
-  }
-
-  //   if (lowestRoll+ highestRoll === 9) {
-  //     return DiceResult.RECHTS_TRINK;
-  //   }
-
-  if (lowestRoll + highestRoll === 11) {
-    return DiceResult.RECHTS_TRINK;
-  }
-
-  return DiceResult.NO_RULE; // No special rule applies
 };
