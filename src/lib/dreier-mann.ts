@@ -20,7 +20,7 @@ export const mapDiceResults = (diceResults: number[]): DiceResult => {
     throw new Error('Invalid input: exactly two dice results are required.');
   }
 
-  const [lowestRoll, highestRoll] = diceResults.sort();
+  const [lowestRoll, highestRoll] = diceResults.sort((a, b) => a - b);
   const sum = lowestRoll + highestRoll;
 
   switch (true) {
