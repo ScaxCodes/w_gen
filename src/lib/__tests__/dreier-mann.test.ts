@@ -27,9 +27,9 @@ describe('mapDiceResults', () => {
     );
   });
 
-  it('should return PLAYER_3ER_MANN for dice sum of 3', () => {
-    expect(mapDiceResults([1, 2])).toBe(DiceResult.PLAYER_3ER_MANN);
-    expect(mapDiceResults([2, 1])).toBe(DiceResult.PLAYER_3ER_MANN);
+  it('should return HOMER for dice sum of 3', () => {
+    expect(mapDiceResults([1, 2])).toBe(DiceResult.HOMER);
+    expect(mapDiceResults([2, 1])).toBe(DiceResult.HOMER);
   });
 
   it('should return DREIER_PASCH for two 3s', () => {

@@ -7,7 +7,7 @@ export const throwDices = (diceCount: number, sides: number): number[] => {
 };
 
 export enum DiceResult {
-  'PLAYER_3ER_MANN',
+  'HOMER',
   'DREIER_PASCH',
   'PASCH',
   'LINKS_TRINK',
@@ -31,7 +31,7 @@ export const mapDiceResults = (diceResults: number[]): DiceResult => {
       return DiceResult.PASCH;
 
     case sum === 3:
-      return DiceResult.PLAYER_3ER_MANN;
+      return DiceResult.HOMER;
 
     case sum === 7:
       return DiceResult.LINKS_TRINK;
