@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "clinyong.vscode-css-modules",
+    "unifiedjs.vscode-mdx",
+    "stylelint.vscode-stylelint",
+    "runem.lit-plugin"
+  ]
+}

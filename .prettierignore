@@ -1,0 +1,16 @@
+*.png
+*.svg
+*.ico
+.gitignore
+.prettierignore
+package-lock.json
+
+# static folders
+build/
+dist/
+.next
+node_modules
+
+# System Files
+.DS_Store
+Thumbs.db
