@@ -1,0 +1,51 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  font-family: var(--font-geist-sans);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  padding: 200px 0 0;
+  gap: 20px;
+}
+
+.game {
+}
+
+.buttonRow {
+  display: flex;
+  gap: 5px;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px #999;
+}
+
+.player {
+  display: flex;
+  gap: 5px;
+}
+
+.player > :nth-child(2) {
+  margin-left: auto;
+}

@@ -1,0 +1,18 @@
+{
+  "printWidth": 80,
+  "singleQuote": true,
+  "semi": true,
+  "tabWidth": 2,
+  "arrowParens": "always",
+  "quoteProps": "consistent",
+  "endOfLine": "lf",
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": "*.module.scss",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
