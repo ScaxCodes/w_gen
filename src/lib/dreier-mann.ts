@@ -23,23 +23,17 @@ export const mapDiceResults = (diceResults: number[]): DiceResult => {
   const [lowestRoll, highestRoll] = diceResults.sort((a, b) => a - b);
   const sum = lowestRoll + highestRoll;
 
-  switch (true) {
-    case lowestRoll === 3 && highestRoll === 3:
-      return DiceResult.DREIER_PASCH;
-
-    case lowestRoll === highestRoll:
-      return DiceResult.PASCH;
-
-    case sum === 3:
-      return DiceResult.HOMER;
-
-    case sum === 7:
-      return DiceResult.LINKS_TRINK;
-
-    case sum === 11:
-      return DiceResult.RECHTS_TRINK;
-
-    default:
-      return DiceResult.NO_RULE;
+  if (lowestRoll === 3 && highestRoll === 3) {
+    return DiceResult.DREIER_PASCH;
+  } else if (lowestRoll === highestRoll) {
+    return DiceResult.PASCH;
+  } else if (sum === 3) {
+    return DiceResult.HOMER;
+  } else if (sum === 7) {
+    return DiceResult.LINKS_TRINK;
+  } else if (sum === 11) {
+    return DiceResult.RECHTS_TRINK;
+  } else {
+    return DiceResult.NO_RULE;
   }
 };
